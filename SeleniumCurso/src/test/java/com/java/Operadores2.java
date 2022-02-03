@@ -1,6 +1,6 @@
 package com.java;
 
-public class Operadores {
+public class Operadores2 {
 
 	public static void main(String[] args) {
 		// OPERATORS
@@ -26,18 +26,19 @@ public class Operadores {
 
 		System.out.println("El valor double es " + mult2);
 
-		// Operadores Unarios
+		// Operadores Unarios: Incrementan o Decrementan valores, se usan en loops
 		int unario = 2;
 		++unario;
 		System.out.println(unario);
 
-		// Operadores relacionales
-//				Igual que ==
-//				Diferente a !=
-//				Mayor que >
-//				Mayor o igual que >=
-//				Menos que <
-//				Menor o igual que <=
+		// Operadores relacionales: Relacionan (comparan) valores
+		
+		//Igual que ==
+		//Diferente a !=
+		//Mayor que >
+		//Mayor o igual que >=
+		//Menos que <
+		//Menor o igual que <=
 
 		int or = 2;
 		int or2 = 3;
@@ -45,7 +46,7 @@ public class Operadores {
 		if (or != or2) {
 			System.out.println("TRUE");
 		} else {
-			System.out.println("False");
+			System.out.println("FALSE");
 		}
 
 		String msg = "Hello";
@@ -54,12 +55,12 @@ public class Operadores {
 		if (msg != msg2) {
 			System.out.println("String TRUE");
 		} else {
-			System.out.println("String False");
+			System.out.println("String FALSE");
 		}
 
-		// Operadores condicionales
-//				 AND &&
-//				 OR ||
+		//Operadores condicionales
+		//AND &&
+		//OR ||
 
 		int oper1 = 2;
 		int oper2 = 2;
