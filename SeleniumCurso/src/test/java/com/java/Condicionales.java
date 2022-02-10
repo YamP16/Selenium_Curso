@@ -6,7 +6,7 @@ public class Condicionales {
 		// CONDICIONALES
 
 		// Automovil conduciendo a exceso de velocidad
-		int limiteVelocidad = 80; // KM*H
+		int limiteVelocidad = 80; // KM*H Calle
 		int velocidadActual = 100; // KM*H
 		//!carretera -> Valida el valor false
 		//carretera ==true

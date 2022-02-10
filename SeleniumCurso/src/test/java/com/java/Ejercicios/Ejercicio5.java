@@ -1,4 +1,4 @@
-package com.java;
+package com.java.Ejercicios;
 
 import java.util.Scanner;  //Importar clase Scanner para poder usar la funcion Scanner
 

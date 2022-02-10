@@ -37,7 +37,7 @@ public class Operadores2 {
 		//Diferente a !=
 		//Mayor que >
 		//Mayor o igual que >=
-		//Menos que <
+		//Menor que <
 		//Menor o igual que <=
 
 		int or = 2;
