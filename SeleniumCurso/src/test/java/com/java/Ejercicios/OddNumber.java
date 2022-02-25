@@ -31,7 +31,6 @@ public class OddNumber {
 				}
 			}
 			return sum;
-
 		} else {
 			return -1;
 		}

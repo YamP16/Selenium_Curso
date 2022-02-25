@@ -3,7 +3,7 @@ package com.java.Ejercicios;
 public class SumaNumero {
 
 	public static void main(String[] args) {
-		boolean suma2 = hasEqualSum(1, 3, 2);
+		boolean suma2 = hasEqualSum(1, 1, 2);
 		System.out.println(suma2);
 	}
 
