@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Yamilett Ponce\AppData\Local\Temp\testng-eclipse-1302106247\testng-customsuite.xml</span>
+                    <span>C:\Users\Yamilett Ponce\AppData\Local\Temp\testng-eclipse--392194644\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.google.EjSelenium" class="method navigator-link" hash-for-method="googleTest">googleTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.opensource.qa.Admin" class="method navigator-link" hash-for-method="tc007ValidateInvalidPassword">tc007ValidateInvalidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.google.EjSelenium</span>
+              <span class="class-name">com.opensource.qa.Admin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="googleTest">
-                  </a> <!-- googleTest -->
-                  <span class="method-name">googleTest</span>
+                  <a name="tc007ValidateInvalidPassword">
+                  </a> <!-- tc007ValidateInvalidPassword -->
+                  <span class="method-name">tc007ValidateInvalidPassword</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Yamilett Ponce\AppData\Local\Temp\testng-eclipse-1302106247\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Yamilett Ponce\AppData\Local\Temp\testng-eclipse--392194644\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +144,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.google.EjSelenium&quot;/&gt;
+      &lt;class name=&quot;com.opensource.qa.Admin&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;tc007ValidateInvalidPassword&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.opensource.qa.Admin --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -186,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'googleTest')
-data.setCell(0, 2, 'com.google.EjSelenium')
-data.setCell(0, 3, 3293);
+data.setCell(0, 1, 'tc007ValidateInvalidPassword')
+data.setCell(0, 2, 'com.opensource.qa.Admin')
+data.setCell(0, 3, 6231);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -204,13 +208,39 @@ return data;
             <span class="header-content">Reporter output for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">tc007ValidateInvalidPassword</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Launch browser</span>
+                <span class="reporter-method-output">Enter username and incorrect password</span>
+                <span class="reporter-method-output">Click Login</span>
+                <span class="reporter-method-output">Verify error message when enter invalid password</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.opensource.qa.Admin</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tc003AdminAddNewUser</span>
+                <br/>
+                <span class="ignored-method-name">tc001AdminSearchEmployee</span>
+                <br/>
+                <span class="ignored-method-name">tc002AdminSearchEmployeeNotExist</span>
+                <br/>
+                <span class="ignored-method-name">tc005AdminCreateUserDisabled</span>
+                <br/>
+                <span class="ignored-method-name">tc006ValidateUserAdmin</span>
+                <br/>
+                <span class="ignored-method-name">tc004_Admin_DeleteUser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -219,18 +249,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.google.EjSelenium</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.opensource.qa.Admin</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">googleTest</span>
-                <span class="method-start">13 ms</span>
+                <span class="method-name">tc007ValidateInvalidPassword</span>
+                <span class="method-start">20 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">3308 ms</span>
+                <span class="method-start">6253 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

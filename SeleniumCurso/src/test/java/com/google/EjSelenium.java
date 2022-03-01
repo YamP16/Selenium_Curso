@@ -33,7 +33,7 @@ public class EjSelenium {
 			
 			//Ejercicio 2
 			String validPage = driver.getCurrentUrl();
-			System.out.println(validPage);
+			Assert.assertEquals(validPage,"https://es-la.facebook.com/");
 			
 			//Ejercicio 3 - Locators
 			
