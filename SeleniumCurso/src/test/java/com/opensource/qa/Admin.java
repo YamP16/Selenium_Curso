@@ -3,7 +3,9 @@ package com.opensource.qa;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,8 +24,8 @@ public class Admin {
 
 	// Instancias de objeto
 
-	String username, password, msgNoRecords, userNotExist, newEmployee, newUser, newpassword, msgPopUp, status,
-			invalidPass, msgInvalidPass;
+	String username, password, msgNoRecords, userNotExist, newEmployee, newUser, msgPopUp, status,
+			invalidPass, msgInvalidPass,count, newpassword;
 
 	@BeforeTest
 	public void beforeTest() {
@@ -34,12 +36,13 @@ public class Admin {
 		userNotExist = "XYZ";
 		msgNoRecords = "No Records Found";
 		newEmployee = "Admin A";
-		newUser = "Armando";
+		newUser = "Name12"; //Crear un usuario random
 		newpassword = "May@2022y";
 		msgPopUp = "Delete records?";
 		status = "Disabled";
 		invalidPass = "error";
 		msgInvalidPass="Invalid credentials";
+		//count = "1";
 	}
 
 	@AfterTest
@@ -158,7 +161,7 @@ public class Admin {
 	}
 
 	@Test
-	public void tc003AdminAddNewUser() {
+	public void tc003AdminAddNewUser(){
 
 		// Step 1
 		Reporter.log("Open Browser \"OrangeHRM\" web page");
@@ -186,7 +189,7 @@ public class Admin {
 		// Step 5
 		Reporter.log("Click Add Button");
 		driver.findElement(By.xpath("//*[@id=\"btnAdd\"]")).click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		// Step 6
 		Reporter.log("Enter a Valid Employee Name");
@@ -194,6 +197,8 @@ public class Admin {
 
 		// Step 7
 		Reporter.log("Enter a Valid User Name");
+		//Random numGenerator = new Random();
+		//int num = numGenerator.nextInt(100);
 		driver.findElement(By.xpath("//*[@id=\"systemUser_userName\"]")).sendKeys(newUser);
 
 		// Step 8
@@ -206,8 +211,20 @@ public class Admin {
 
 		// Step10
 		Reporter.log("Click Save");
-		driver.findElement(By.xpath("//*[@id=\"btnSave\"]")).click();
+		
+		//Se agrega hardwait por tema de sincronización, buscar modo lógico ya que lo recomendable es no usar hardwait
+		// o por javascript: 
+		//WebElement element = driver.findElement("su objeto") 
+		//JavascriptExecutor executor = (JavascriptExecutor) driver;
+		//executor.executeScript("arguments[0].click();", element);
+		//Thread.sleep(2000);
+		
+		//Modo logico
+		WebDriverWait wait1 = new WebDriverWait(driver,3);
+		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"systemUser_password_strength_meter\"]")));
 
+		driver.findElement(By.xpath("//*[@id=\"btnSave\"]")).click();
+		 
 		// Step 11
 		Reporter.log("Search username in field \"Username\"");
 		driver.findElement(By.xpath("//*[@id=\"searchSystemUser_userName\"]")).sendKeys(newUser);
@@ -226,6 +243,10 @@ public class Admin {
 
 		// Step 14
 		Reporter.log("Log out");
+		
+		WebDriverWait wait2 = new WebDriverWait(driver,10);
+		wait2.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"resultTable\"]/tbody/tr[2]/td[2]")));
+		
 		driver.findElement(By.id("welcome")).click();
 		driver.findElement(By.xpath("//a[contains(@href, 'logout')]")).click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -234,6 +255,7 @@ public class Admin {
 		Reporter.log("Close Browser");
 		driver.close();
 	}
+
 
 	@Test
 	public void tc004_Admin_DeleteUser() {

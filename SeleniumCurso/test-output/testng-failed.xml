@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="tc005AdminCreateUserDisabled"/>
+          <include name="tc004_Admin_DeleteUser"/>
         </methods>
       </class> <!-- com.opensource.qa.Admin -->
     </classes>
