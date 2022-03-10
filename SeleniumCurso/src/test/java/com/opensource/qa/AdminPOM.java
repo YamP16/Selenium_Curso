@@ -16,6 +16,7 @@ import org.testng.annotations.AfterTest;
 public class AdminPOM {
 	/*
 	 * Objects instances
+	 * Variables Locales
 	 */
 
 	WebDriver driver;
@@ -34,7 +35,8 @@ public class AdminPOM {
 		admin = new Admin(driver);
 
 		// Test Data
-		username = base.getJSONData(jsonCredentials, "username");
+		//username = "Admin"; Dato hardcodeado (incorrecto)
+		username = base.getJSONData(jsonCredentials, "username"); //Datos referenciados a un json file (correcto)
 		password = base.getJSONData(jsonCredentials, "password");
 		userNotExist = base.getJSONData(jsonAdminTestData, "userNotExist");
 		msgNoRecords = base.getJSONData(jsonAdminTestData, "msgNoRecords");

@@ -1,0 +1,13 @@
+{
+	"superUser": /*Nodo 1*/
+	{
+		"username": "admin",
+		"password": "admin123"
+	},
+	
+	"adminUser": /*Nodo 1*/
+	{
+		"username": "admin",
+		"password": "pwd123"
+	}
+}
